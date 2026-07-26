@@ -59,7 +59,7 @@ stream feeds it continuously, and every prediction is logged for monitoring.
 
 ---
 
-## Reflection questions (from the module description)
+## Challenges and Concerns
 
 **Challenges of integrating a model into a service.** Matching the data format the
 model expects on every request; keeping the same preprocessing in training and
