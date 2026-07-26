@@ -1,0 +1,6 @@
+*.log
+predictions_extract.txt
+model.pkl
+sensor_data.csv
+__pycache__/
+*.pyc
