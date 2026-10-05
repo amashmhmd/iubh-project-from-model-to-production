@@ -1,16 +1,21 @@
 """
 generate_data.py
 -----------------
-Creates a sample dataset that imitates the factory sensors described in the task:
-temperature, humidity and sound volume measured for each produced item.
+The dataset is created to imitate factory sensor readings for each produced item. 
+It includes measurements for **temperature, humidity, and sound volume**, 
+representing the operating conditions of the factory machines.
 
-We invent the data ourselves (the task explicitly allows "fictional sample data").
-Most items are NORMAL. A small fraction are ANOMALIES with shifted readings,
-e.g. an overheating or unusually loud machine.
+The task allows the use of fictional sample data, so the data is created for this purpose. 
+Most of the items have **normal sensor readings**, while a small number are intentionally generated as 
+**anomalies** with unusual values. 
+For example, some items may have a very high temperature, which could represent an overheating machine, 
+while others may have an unusually high sound volume, indicating that a machine is operating abnormally.
 
-We also save a column 'is_anomaly' as GROUND TRUTH. The model itself will NOT use
-this column (anomaly detection is unsupervised) - we only keep it so that later we
-can check whether the model actually catches the anomalies we planted.
+An **`is_anomaly`** column is also included as the ground truth. 
+This column shows whether each item was intentionally created as normal or anomalous. 
+The model does **not use this column during training**, since the task is based on unsupervised anomaly detection. 
+It is only used later to check how well the model detects the anomalies that were added to the dataset.
+
 """
 
 import numpy as np
